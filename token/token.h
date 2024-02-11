@@ -13,6 +13,7 @@ typedef enum{ //new data type
     TOKEN_OP, 
     TOKEN_SYM, 
     TOKEN_STR,
+    TOKEN_UNKNOWN,
 } token_type_t; //typedef alias = token_type_t
 
 typedef struct{ 
@@ -21,7 +22,7 @@ typedef struct{
 } token_t;
 
 //declare function to define each token, allow for separate compilation -- definition in source file
-token_t* define_token(char* text); 
-token_t* get_token_stream(FILE* stream)
+token_type_t classify_token(char* text); 
+token_t* get_token_stream(FILE* stream);
 
 #endif // INT_TOKEN_H
