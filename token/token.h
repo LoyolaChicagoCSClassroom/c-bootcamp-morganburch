@@ -6,6 +6,8 @@ You will create an abstract datatype (struct token_t) that will have a
 #ifndef INT_TOKEN_H //Prevent multiple inclusions of the same header file 
 #define INT_TOKEN_H
 
+#include <stdio.h>
+
 typedef enum{ //new data type
     TOKEN_NUM,
     TOKEN_OP, 
@@ -20,5 +22,6 @@ typedef struct{
 
 //declare function to define each token, allow for separate compilation -- definition in source file
 token_t* define_token(char* text); 
+token_t* get_token_stream(FILE* stream)
 
 #endif // INT_TOKEN_H
