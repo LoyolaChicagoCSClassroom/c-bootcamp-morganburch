@@ -23,6 +23,8 @@ typedef struct{
 
 //declare function to define each token, allow for separate compilation -- definition in source file
 token_type_t classify_token(char* text); 
-token_t* get_token_stream(FILE* stream);
+    //given a single token, return its type 
+token_t* get_token_stream(FILE* stream); //TODO
+    //take a string as input, split it into tokens, classify each token,and return a stream of tokens.
 
 #endif // INT_TOKEN_H
