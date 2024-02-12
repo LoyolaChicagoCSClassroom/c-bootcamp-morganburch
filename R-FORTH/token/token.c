@@ -22,6 +22,7 @@ token_type_t classify_token(char *text){
         printf("empty string");
         return  TOKEN_UNKNOWN;
     }
+}
 
     token_t* get_token_stream(FILE *stream){ 
         char status[1024] = ""; //string of all tokens 
@@ -50,5 +51,4 @@ token_type_t classify_token(char *text){
        free(buffer);
        return NULL;
     }
-}
 
