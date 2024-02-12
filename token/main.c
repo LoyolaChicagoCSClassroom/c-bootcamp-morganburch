@@ -4,7 +4,8 @@
 #include "token.h"
 #include "token.c"
 
-int main(int argc, char** argv){ 
+int main(int argc, char** argv){
+    get_token_stream(stdin); 
     return 0; 
 }
 
