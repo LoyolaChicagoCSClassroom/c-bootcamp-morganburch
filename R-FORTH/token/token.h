@@ -5,6 +5,7 @@ You will create an abstract datatype (struct token_t) that will have a
 */
 #ifndef INT_TOKEN_H //Prevent multiple inclusions of the same header file 
 #define INT_TOKEN_H
+#define MAX_TOKENS 1000
 
 #include <stdio.h>
 

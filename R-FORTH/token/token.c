@@ -19,22 +19,32 @@ token_type_t classify_token(char *text){
             return TOKEN_UNKNOWN;
         }
     }else{ 
-        printf("empty string");
         return  TOKEN_UNKNOWN;
     }
 }
 
     token_t* get_token_stream(FILE *stream){ 
-        char status[1024] = ""; //string of all tokens 
-        char *buffer; //hold the line of text read from the stream
+        //array to be returned 
+        token_t* tokens = malloc(MAX_TOKENS * sizeof(token_t));
+        int token_count = 0;
+
+        char *buffer = NULL; //hold the line of text read from the stream
         size_t buffsize = 0; //allocated by getline()
-        size_t chars; //num chars read from stream
         char *typeName = "";
 
-       while((chars = getline(&buffer, &buffsize, stream)) !=  -1){ //getline returns -1 when EOF
+       while(getline(&buffer, &buffsize, stream) !=  -1){ //getline returns -1 when EOF
         char *token = strtok(buffer, " ");//split stream at each blank space
-            while(token != NULL){ 
+            while(token != NULL && token_count < MAX_TOKENS){ 
                 token_type_t type = classify_token(token);
+
+                //add to array to be returned (with value and type)
+                while(token != NULL && token_count < MAX_TOKENS){ 
+                    tokens[token_count].type = type;
+                    tokens[token_count].text = strdup(token);  // Make sure to free this later!
+
+                    token_count++;
+                    token = strtok(NULL, " ");
+                }
 
                 if (type == 0){ typeName = "Number";
                 }else if (type == 1){ typeName = "Operation";                
@@ -42,8 +52,7 @@ token_type_t classify_token(char *text){
                 }else if (type == 3){ typeName = "String"; 
                 }else{ typeName = "Unknown";} 
 
-                strcat(status, token);
-                strcat(status, " ");
+                
                 printf("Token: %s, Type: %s\n", token, typeName);
                 token = strtok(NULL, " ");//get next token
             }
