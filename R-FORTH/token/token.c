@@ -1,8 +1,9 @@
 
 #include "token.h" //"" in same directory
-
+#include <ctype.h> //for isalpha, etc in classify
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h> //for strtok
 
 token_type_t classify_token(char *text){ 
     if(strlen(text) == 1){ //working w one char
@@ -42,7 +43,7 @@ token_type_t classify_token(char *text){
 
                 strcat(status, token);
                 strcat(status, " ");
-                printf("Token: &s, Type: &s\n", token, typeName);
+                printf("Token: %s, Type: %s\n", token, typeName);
                 token = strtok(NULL, " ");//get next token
             }
        }

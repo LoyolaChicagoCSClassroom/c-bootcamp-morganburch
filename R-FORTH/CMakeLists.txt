@@ -26,7 +26,7 @@ add_subdirectory(lwlog-lib)
 add_subdirectory(lwlog-demo)
 add_subdirectory(gtest-demo)
 add_subdirectory(HWpractice)
-add_subdirectory(token)
+
 
 
 
