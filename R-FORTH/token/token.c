@@ -6,22 +6,37 @@
 #include <string.h> //for strtok
 
 token_type_t classify_token(char *text){ 
-    if(strlen(text) == 1){ //working w one char
-        if (isalpha(text[0])){ 
-            return  TOKEN_STR;
-        } else if(isdigit(text[0])){
-             return TOKEN_NUM; 
-        }else if(strchr("+-*/", text[0])){ 
-            return TOKEN_OP;             
-        }else if(strchr(":, ;", text[0])){
-            return TOKEN_SYM; 
-        }else { 
-            return TOKEN_UNKNOWN;
+    int i; 
+    int isNum = 1, isStr = 1, isOp = 1, isSym = 1; //assume true, set to false in loop
+
+    for(i=0; i < strlen(text); i++){ 
+        if (!isalpha(text[i])){ 
+            isStr = 0;
         }
+        if(!isdigit(text[i])){
+             isNum = 0; 
+        }
+        if(!strchr("+-*/", text[i])){ 
+            isOp = 0;             
+        }
+        if(!strchr(":,;", text[i])){
+            isSym = 0; 
+        }
+    }
+    //return the true flag 
+    if(isNum){ 
+        return TOKEN_NUM;
+    }else if (isStr){ 
+        return TOKEN_STR; 
+    }else if (isOp) {
+        return TOKEN_OP;
+    }else if (isSym){ 
+        return TOKEN_SYM;
     }else{ 
-        return  TOKEN_UNKNOWN;
+        return TOKEN_UNKNOWN;
     }
 }
+
 
     token_t* get_token_stream(FILE *stream){ 
         //array to be returned 
@@ -43,7 +58,7 @@ token_type_t classify_token(char *text){
                     tokens[token_count].text = strdup(token);  // Make sure to free this later!
 
                     token_count++;
-                    token = strtok(NULL, " ");
+                    token = strtok(NULL, " ");//get new token 
                 }
 
                 if (type == 0){ typeName = "Number";
