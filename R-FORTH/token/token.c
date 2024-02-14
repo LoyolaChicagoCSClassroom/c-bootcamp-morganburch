@@ -10,6 +10,7 @@ token_type_t classify_token(char *text){
     int isNum = 1, isStr = 1, isOp = 1, isSym = 1; //assume true, set to false in loop
 
     for(i=0; i < strlen(text); i++){ 
+        if (text[i] == '\n') continue; //ignore newline bc strtok automatically adds one
         if (!isalpha(text[i])){ 
             isStr = 0;
         }
@@ -39,9 +40,9 @@ token_type_t classify_token(char *text){
 
 
     token_t* get_token_stream(FILE *stream){ 
-        //array to be returned 
-        token_t* tokens = malloc(MAX_TOKENS * sizeof(token_t));
-        int token_count = 0; //to make sure we dont add too many tokens
+        printf("Type Here: ");
+        token_t* tokens = malloc(MAX_TOKENS * sizeof(token_t)); //array to be returned 
+        int token_count = 0; 
 
         char *buffer = NULL; //hold the line of text read from the stream
         size_t buffsize = 0; //allocated by getline()
@@ -50,30 +51,26 @@ token_type_t classify_token(char *text){
        while(getline(&buffer, &buffsize, stream) !=  -1){ //getline returns -1 when EOF
         char *token = strtok(buffer, " ");//split stream at each blank space -- delimiter
             while(token != NULL && token_count < MAX_TOKENS){ 
+                //printf("format = -%s-", token); for testing
                 token_type_t type = classify_token(token);
                 char * tokenStr = token;
 
                 //add to array to be returned (with value and type)
-                while((token != NULL) && (token_count < MAX_TOKENS)){ 
-                    tokens[token_count].type = type;
-                    tokens[token_count].text = strdup(token);  // Make sure to free this later!
-
-                    token_count++;
-                    token = strtok(NULL, " ");//get new token 
-                }
-
+                tokens[token_count].type = type;
+                tokens[token_count].text = strdup(token);  // Make sure to free this later!
+                
                 if (type == 0){ typeName = "Number";
                 }else if (type == 1){ typeName = "Operation";                
                 }else if (type == 2){ typeName = "Symbol";  
                 }else if (type == 3){ typeName = "String"; 
                 }else{ typeName = "Unknown";} 
-
                 
-                printf("Token: %s, Type: %s\n", tokenStr, typeName);
+                printf("{Token: %s\nType: %s}\n", tokenStr, typeName);
+                token_count++; 
                 token = strtok(NULL, " ");//get next token
             }
        }
        free(buffer);
-       return NULL;
+       return tokens;
     }
 
