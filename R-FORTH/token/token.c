@@ -1,5 +1,5 @@
 
-#include "token.h" //"" in same directory
+#include "currToken.h" //"" in same directory
 #include <ctype.h> //for isalpha, etc in classify
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,14 +13,11 @@ token_type_t classify_token(char *text){
         if (text[i] == '\n') continue; //ignore newline bc strtok automatically adds one
         if (!isalpha(text[i])){ 
             isStr = 0;
-        }
-        if(!isdigit(text[i])){
+        }if(!isdigit(text[i])){
              isNum = 0; 
-        }
-        if(!strchr("+-*/", text[i])){ 
+        }if(!strchr("+-*/", text[i])){ 
             isOp = 0;             
-        }
-        if(!strchr(":,;", text[i])){
+        }if(!strchr(":,;", text[i])){
             isSym = 0; 
         }
     }
@@ -33,7 +30,7 @@ token_type_t classify_token(char *text){
         return TOKEN_OP;
     }else if (isSym){ 
         return TOKEN_SYM;
-    }else{ 
+    }else{ //failing case (perhaps should make enum 0?)
         return TOKEN_UNKNOWN;
     }
 }
@@ -49,15 +46,13 @@ token_type_t classify_token(char *text){
         char *typeName = "";
 
        while(getline(&buffer, &buffsize, stream) !=  -1){ //getline returns -1 when EOF
-        char *token = strtok(buffer, " ");//split stream at each blank space -- delimiter
-            while(token != NULL && token_count < MAX_TOKENS){ 
-                //printf("format = -%s-", token); for testing
-                token_type_t type = classify_token(token);
-                char * tokenStr = token;
+        char *currToken = strtok(buffer, " ");//split stream at each blank space -- " " delimiter
+            while(currToken != NULL && token_count < MAX_TOKENS){ 
+                token_type_t type = classify_token(currToken);
 
                 //add to array to be returned (with value and type)
                 tokens[token_count].type = type;
-                tokens[token_count].text = strdup(token);  // Make sure to free this later!
+                tokens[token_count].text = strdup(currToken);  // Make sure to free this later!
                 
                 if (type == 0){ typeName = "Number";
                 }else if (type == 1){ typeName = "Operation";                
@@ -65,12 +60,11 @@ token_type_t classify_token(char *text){
                 }else if (type == 3){ typeName = "String"; 
                 }else{ typeName = "Unknown";} 
                 
-                printf("{Token: %s\nType: %s}\n", tokenStr, typeName);
+                printf("{Token: %s\nType: %s}\n", currToken, typeName); //weird format on last currToken
                 token_count++; 
-                token = strtok(NULL, " ");//get next token
+                currToken = strtok(NULL, " ");//get next currToken
             }
        }
        free(buffer);
        return tokens;
     }
-

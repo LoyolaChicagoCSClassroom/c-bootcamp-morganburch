@@ -15,7 +15,7 @@ typedef enum{ //new data type
     TOKEN_SYM, 
     TOKEN_STR,
     TOKEN_UNKNOWN,
-} token_type_t; //typedef alias = token_type_t
+} token_type_t; //alias
 
 typedef struct{ 
     token_type_t type;
