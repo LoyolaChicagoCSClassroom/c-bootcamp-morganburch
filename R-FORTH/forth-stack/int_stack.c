@@ -58,6 +58,7 @@ int int_stack_dup(int_stack_t *stk) {
     int_stack_top(stk, &top_value);
     return int_stack_push(stk, top_value); // success only if last operation succeeds
 }
+/*
 int int_stack_2dup(int_stack_t *stk) {
     if (stk->size < 2)
         return 0;
@@ -68,6 +69,7 @@ int int_stack_2dup(int_stack_t *stk) {
     int_stack_push(next_to_top_value);
     return int_stack_push(stk, top_value); // success only if last operation succeeds
 }
+*/
 int int_stack_swap(int_stack_t *stk) {
     if (stk->size < 2)
         return 0;

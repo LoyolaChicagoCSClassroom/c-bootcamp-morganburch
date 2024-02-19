@@ -22,15 +22,15 @@ extern int int_stack_push(int_stack_t *stk, int value);
 extern int int_stack_pop(int_stack_t *stk, int *top_value);
 extern int int_stack_top(int_stack_t *stk, int *top_value);
 extern int int_stack_dup(int_stack_t *stk);
-extern int int_stack_2dup(int_stack_t *stk)
+//extern int int_stack_2dup(int_stack_t *stk);
 extern int int_stack_swap(int_stack_t *stk);
 extern int int_stack_add(int_stack_t *stk);
 extern void int_stack_print(int_stack_t *stk, FILE *file);
 extern int int_stack_size(int_stack_t* stk);
 extern int int_stack_capacity(int_stack_t* stk);
-extern int int_stack_subtract(int_stack_t *stk)
-extern int int_stack_multiply(int_stack_t *stk)
-extern int int_stack_divide(int_stack_t *stk)
+extern int int_stack_subtract(int_stack_t *stk);
+extern int int_stack_multiply(int_stack_t *stk);
+extern int int_stack_divide(int_stack_t *stk);
 
 /*TODO: 
 //extern int int_stack_/mod(int_stack_t *stk)

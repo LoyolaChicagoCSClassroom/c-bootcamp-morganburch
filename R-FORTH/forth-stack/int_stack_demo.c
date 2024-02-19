@@ -35,7 +35,7 @@ int main() {
     int_stack_push(&myStack, 7);
     int_stack_push(&myStack, 8);
     int_stack_print(&myStack, stdout);
-    int_stack_2dup(&myStack);
+    //int_stack_2dup(&myStack);
     int_stack_print(&myStack, stdout);
 
     /* Quick tests for swap, dup, and add.

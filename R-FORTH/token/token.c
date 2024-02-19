@@ -1,5 +1,5 @@
 
-#include "currToken.h" //"" in same directory
+#include "token.h" //"" in same directory
 #include <ctype.h> //for isalpha, etc in classify
 #include <stdio.h>
 #include <stdlib.h>
