@@ -20,7 +20,7 @@ int int_stack_push(int_stack_t *stk, int value) {
     int_entry_t *newEntry = malloc(sizeof(int_entry_t));
     if (newEntry) {
         newEntry->value = value;
-        SLIST_INSERT_HEAD(&stk->head, newEntry, entries);
+        SLIST_INSERT_HEAD(&stk->head, newEntry, entries); 
         stk->size++;
         return 1; //success
     }
@@ -58,6 +58,17 @@ int int_stack_dup(int_stack_t *stk) {
     int_stack_top(stk, &top_value);
     return int_stack_push(stk, top_value); // success only if last operation succeeds
 }
+int int_stack_2dup(int_stack_t *stk) {
+    if (stk->size < 2)
+        return 0;
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value); //remove top and save val 
+    int_stack_pop(stk, &next_to_top_value); //same for second
+    int_stack_push(top_value);
+    int_stack_push(next_to_top_value);
+    int_stack_push(top_value);
+    return int_stack_push(stk, top_value); // success only if last operation succeeds
+}
 
 int int_stack_swap(int_stack_t *stk) {
     if (stk->size < 2)
@@ -78,6 +89,33 @@ int int_stack_add(int_stack_t *stk) {
     int_stack_pop(stk, &top_value);
     int_stack_pop(stk, &next_to_top_value);
     return int_stack_push(stk, top_value + next_to_top_value);
+}
+
+int int_stack_subtract(int_stack_t *stk) {
+    if (stk->size < 2)
+        return 0;
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+    return int_stack_push(stk, top_value - next_to_top_value);
+}
+
+int int_stack_multiply(int_stack_t *stk) {
+    if (stk->size < 2)
+        return 0;
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+    return int_stack_push(stk, top_value * next_to_top_value);
+}
+
+int int_stack_divide(int_stack_t *stk) {
+    if (stk->size < 2)
+        return 0;
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+    return int_stack_push(stk, top_value / next_to_top_value);
 }
 
 void int_stack_print(int_stack_t *stk, FILE *file) {
