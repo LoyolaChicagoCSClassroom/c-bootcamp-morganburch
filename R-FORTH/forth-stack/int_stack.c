@@ -144,7 +144,7 @@ int int_stack_drop(int_stack_t *stk) { //remove top item on stack
      if (stk->size < 1)
         return 0;
     int top_value;
-    return int_stack_pop(stk, &top);
+    return int_stack_pop(stk, &top_value);
 }
 
 int int_stack_2drop(int_stack_t *stk) { //remove top 2 items on stack
@@ -182,7 +182,7 @@ int int_stack_2over(int_stack_t *stk) { //copy second to top item on the stack
     int_stack_push(stk, next_to_top_value);
     int_stack_push(stk, top_value);
     int_stack_push(stk, fourth_value);
-    int_stack_push(stk, third_value);
+    return int_stack_push(stk, third_value);
 }
 
 int int_stack_rot(int_stack_t *stk){
@@ -196,5 +196,41 @@ int int_stack_rot(int_stack_t *stk){
     int_stack_push(stk, next_to_top_value);
     int_stack_push(stk, top_value);
     int_stack_push(stk, third_value);
-    
+}
+
+int int_stack_mod_r(int_stack_t *stk){ 
+    if (stk->size < 2)
+        return 0;
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+    return int_stack_push(stk, top_value % next_to_top_value);
+}
+
+int int_stack_mod_rq(int_stack_t *stk){ 
+    if (stk->size < 2)
+        return 0;
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+    int_stack_push(stk, top_value % next_to_top_value);
+    return int_stack_push(stk, top_value / next_to_top_value);
+}
+
+int int_stack_2swap(int_stack_t *stk){ 
+    if (stk->size < 4)
+        return 0;
+    int top_value, next_to_top_value, third_value, fourth_value;
+
+    //pop all off stack
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+    int_stack_pop(stk, &third_value);//remove third item
+    int_stack_pop(stk, &fourth_value);//copy fourth
+
+    //swap
+    int_stack_push(stk, next_to_top_value);
+    int_stack_push(stk, top_value);
+    int_stack_push(stk, fourth_value);
+    int_stack_push(stk, third_value);
 }
