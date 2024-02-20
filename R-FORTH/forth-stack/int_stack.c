@@ -139,3 +139,16 @@ int int_stack_size(int_stack_t* stk) {
 int int_stack_capacity(int_stack_t* stk) {
     return stk->capacity;
 }
+
+int int_stack_drop(int_stack_t *stk) {
+     if (stk->size < 1)
+        return 0;
+    return int_stack_pop(int_stack_t *stk, stk-> head);
+}
+
+int int_stack_2drop(int_stack_t *stk) {
+     if (stk->size < 1)
+        return 0;
+    int_stack_pop(int_stack_t *stk, stk-> head);
+    return int_stack_pop(int_stack_t *stk, stk-> head);
+}
