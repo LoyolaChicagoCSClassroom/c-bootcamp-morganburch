@@ -60,8 +60,9 @@ TEST(IntStackTests, PushToCapcacityPopUntilUnderflow
     }
 
     // try to remove from empty stack and ensure it fails
-    int top_value;
-    int result = int_stack_pop(&stack1, &top_value);
+    int top_value = 1;
+    int result = int_stack_pop(&stack1, &top_value); //value in top_value should not change (becasue there is nothing in the stack)
+    ASSERT_EQ(1, top_value);
     ASSERT_FALSE(result);
 }
 

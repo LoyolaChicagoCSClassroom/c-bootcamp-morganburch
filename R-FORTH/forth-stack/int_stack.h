@@ -33,17 +33,15 @@ extern int int_stack_multiply(int_stack_t *stk);
 extern int int_stack_divide(int_stack_t *stk);
 extern int int_stack_drop(int_stack_t *stk);
 extern int int_stack_2drop(int_stack_t *stk);
-
+extern int int_stack_over(int_stack_t *stk);
+extern int int_stack_2over(int_stack_t *stk);
+extern int int_stack_rot(int_stack_t *stk);
 
 
 /*TODO: 
 //extern int int_stack_/mod(int_stack_t *stk)
 //extern int int_stack_mod(int_stack_t *stk)
-//extern int int_stack_over(int_stack_t *stk)
-//extern int int_stack_rot(int_stack_t *stk)
-//extern int int_stack_drop(int_stack_t *stk)
 //extern int int_stack_2swap(int_stack_t *stk)
-//extern int int_stack_2over(int_stack_t *stk)
 */
 
 #endif // INT_STACK_H

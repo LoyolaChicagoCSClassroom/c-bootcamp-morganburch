@@ -140,15 +140,61 @@ int int_stack_capacity(int_stack_t* stk) {
     return stk->capacity;
 }
 
-int int_stack_drop(int_stack_t *stk) {
+int int_stack_drop(int_stack_t *stk) { //remove top item on stack
      if (stk->size < 1)
         return 0;
-    return int_stack_pop(int_stack_t *stk, stk-> head);
+    int top_value;
+    return int_stack_pop(stk, &top);
 }
 
-int int_stack_2drop(int_stack_t *stk) {
+int int_stack_2drop(int_stack_t *stk) { //remove top 2 items on stack
      if (stk->size < 1)
         return 0;
-    int_stack_pop(int_stack_t *stk, stk-> head);
-    return int_stack_pop(int_stack_t *stk, stk-> head);
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value);
+    return int_stack_pop(stk, &next_to_top_value);
+}
+
+int int_stack_over(int_stack_t *stk) { //copy second to top item on the stack
+    if (stk->size < 2)
+        return 0;
+    int top_value, next_to_top_value;
+    int_stack_pop(stk, &top_value);
+    int_stack_top(stk, &next_to_top_value);
+    int_stack_push(stk, top_value);
+    int_stack_push(stk, next_to_top_value);
+}
+
+int int_stack_2over(int_stack_t *stk) { //copy second to top item on the stack
+    if (stk->size < 4)
+        return 0;
+    int top_value, next_to_top_value, third_value, fourth_value;
+
+    //first pair off the stack
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+
+    int_stack_pop(stk, &third_value);//remove third item
+    int_stack_top(stk, &fourth_value);//copy fourth
+
+    //restore the stack and add new pair 
+    int_stack_push(stk, third_value);
+    int_stack_push(stk, next_to_top_value);
+    int_stack_push(stk, top_value);
+    int_stack_push(stk, fourth_value);
+    int_stack_push(stk, third_value);
+}
+
+int int_stack_rot(int_stack_t *stk){
+    if (stk->size < 3)
+        return 0;
+    int top_value, next_to_top_value, third_value;
+    int_stack_pop(stk, &top_value);
+    int_stack_pop(stk, &next_to_top_value);
+    int_stack_pop(stk, &third_value);
+    //reorder
+    int_stack_push(stk, next_to_top_value);
+    int_stack_push(stk, top_value);
+    int_stack_push(stk, third_value);
+    
 }
