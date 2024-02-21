@@ -97,7 +97,7 @@ int int_stack_subtract(int_stack_t *stk) {
     int top_value, next_to_top_value;
     int_stack_pop(stk, &top_value);
     int_stack_pop(stk, &next_to_top_value);
-    return int_stack_push(stk, top_value - next_to_top_value);
+    return int_stack_push(stk, next_to_top_value - top_value);
 }
 
 int int_stack_multiply(int_stack_t *stk) {
@@ -115,7 +115,8 @@ int int_stack_divide(int_stack_t *stk) {
     int top_value, next_to_top_value;
     int_stack_pop(stk, &top_value);
     int_stack_pop(stk, &next_to_top_value);
-    return int_stack_push(stk, top_value / next_to_top_value);
+    int quotient = next_to_top_value/top_value;
+    return int_stack_push(stk, quotient);
 }
 
 void int_stack_print(int_stack_t *stk, FILE *file) {

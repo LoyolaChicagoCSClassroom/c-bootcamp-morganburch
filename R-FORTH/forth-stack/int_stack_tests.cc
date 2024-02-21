@@ -38,9 +38,7 @@ TEST(IntStackTests, PushToCapacityAndOverflow)
 }
 
 
-TEST(IntStackTests, PushToCapcacityPopUntilUnderflow
-)
-{
+TEST(IntStackTests, PushToCapcacityPopUntilUnderflow){
     // create stack that can hold 10 items [similar to previous test]
     int_stack_t stack1;
     const int capacity = 10;
@@ -68,25 +66,29 @@ TEST(IntStackTests, PushToCapcacityPopUntilUnderflow
 
 TEST(IntStackTests, arithmeticOperations){
     int_stack_t stack1;
+    int top_value;
     int_stack_init(&stack1, 10);
     int_stack_push(&stack1, 6);
     int_stack_push(&stack1, 2);
 
+    int_stack_add(&stack1);
+    int_stack_top(&stack1,&top_value);
+    ASSERT_EQ(top_value,8);
 
-    ASSERT_EQ(int_stack_add(&stack1),8);
-    ASSERT_EQ(int_stack_size(&stack1), 1);
     int_stack_push(&stack1, 2);
+    int_stack_subtract(&stack1);
+    int_stack_top(&stack1,&top_value);
+    ASSERT_EQ(top_value,6);
 
-    ASSERT_EQ(int_stack_subtract(&stack1),6);
-    ASSERT_EQ(int_stack_size(&stack1), 1);
     int_stack_push(&stack1, 2);
+    int_stack_multiply(&stack1);
+    int_stack_top(&stack1,&top_value);
+    ASSERT_EQ(top_value,12);
 
-    ASSERT_EQ(int_stack_divide(&stack1),3);
-    ASSERT_EQ(int_stack_size(&stack1), 1);
     int_stack_push(&stack1, 4);
-
-    ASSERT_EQ(int_stack_multiply(&stack1),12);   
-    ASSERT_EQ(int_stack_size(&stack1), 1); 
+    int_stack_divide(&stack1);
+    int_stack_top(&stack1,&top_value);
+    ASSERT_EQ(top_value,3);
 }
 
 
