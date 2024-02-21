@@ -66,6 +66,32 @@ TEST(IntStackTests, PushToCapcacityPopUntilUnderflow
     ASSERT_FALSE(result);
 }
 
+TEST(IntStackTests, arithmeticOperations){
+    int_stack_t stack1;
+    int_stack_init(&stack1, 10);
+    int_stack_push(&stack1, 6);
+    int_stack_push(&stack1, 2);
+
+
+    ASSERT_EQ(int_stack_add(&stack1),8);
+    ASSERT_EQ(int_stack_size(&stack1), 1);
+    int_stack_push(&stack1, 2);
+
+    ASSERT_EQ(int_stack_subtract(&stack1),6);
+    ASSERT_EQ(int_stack_size(&stack1), 1);
+    int_stack_push(&stack1, 2);
+
+    ASSERT_EQ(int_stack_divide(&stack1),3);
+    ASSERT_EQ(int_stack_size(&stack1), 1);
+    int_stack_push(&stack1, 4);
+
+    ASSERT_EQ(int_stack_multiply(&stack1),12);   
+    ASSERT_EQ(int_stack_size(&stack1), 1); 
+}
+
+
+
+
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
