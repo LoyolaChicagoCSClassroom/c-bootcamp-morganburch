@@ -205,7 +205,7 @@ int int_stack_mod_r(int_stack_t *stk){
     int top_value, next_to_top_value;
     int_stack_pop(stk, &top_value);
     int_stack_pop(stk, &next_to_top_value);
-    return int_stack_push(stk, top_value % next_to_top_value);
+    return int_stack_push(stk, next_to_top_value % top_value);
 }
 
 int int_stack_mod_rq(int_stack_t *stk){ 
@@ -214,8 +214,8 @@ int int_stack_mod_rq(int_stack_t *stk){
     int top_value, next_to_top_value;
     int_stack_pop(stk, &top_value);
     int_stack_pop(stk, &next_to_top_value);
-    int_stack_push(stk, top_value % next_to_top_value);
-    return int_stack_push(stk, top_value / next_to_top_value);
+    int_stack_push(stk, next_to_top_value % top_value);
+    return int_stack_push(stk, next_to_top_value / top_value);
 }
 
 int int_stack_2swap(int_stack_t *stk){ 
