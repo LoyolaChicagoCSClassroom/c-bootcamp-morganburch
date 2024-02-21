@@ -5,7 +5,7 @@
 
 int main() {
     int_stack_t myStack;
-    const int capacity = 5;
+    const int capacity = 10;
 
     // Initialize the stack with a capacity of 5.
     int_stack_init(&myStack, capacity);
@@ -32,13 +32,16 @@ int main() {
 
     // Print the stack (top to bottom)
     int_stack_print(&myStack, stdout); //empty stack
+    int_stack_push(&myStack, 1);
+    int_stack_push(&myStack, 2);
+    int_stack_push(&myStack, 3);
     int_stack_push(&myStack, 4);
-    int_stack_push(&myStack, 8);
-    int_stack_print(&myStack, stdout);
-    int_stack_2dup(&myStack);
-    int_stack_divide(&myStack);
-    int_stack_multiply(&myStack);
-    int_stack_print(&myStack, stdout);
+    int_stack_print(&myStack, stdout); 
+    int_stack_2over(&myStack);
+    int_stack_print(&myStack, stdout); 
+    int_stack_2drop(&myStack);
+    int_stack_print(&myStack, stdout); 
+
 
     /* Quick tests for swap, dup, and add.
 

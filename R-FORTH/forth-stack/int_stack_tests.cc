@@ -70,34 +70,34 @@ TEST(IntStackTests, arithmeticOperations){
     int_stack_init(&stack1, 10);
     int_stack_push(&stack1, 6);
     int_stack_push(&stack1, 2);
-
+    //add
     int_stack_add(&stack1);
     int_stack_top(&stack1,&top_value);
     ASSERT_EQ(top_value,8);
-
+    //sub
     int_stack_push(&stack1, 2);
     int_stack_subtract(&stack1);
     int_stack_top(&stack1,&top_value);
     ASSERT_EQ(top_value,6);
-
+    //mult
     int_stack_push(&stack1, 2);
     int_stack_multiply(&stack1);
     int_stack_top(&stack1,&top_value);
     ASSERT_EQ(top_value,12);
-
+    //divide
     int_stack_push(&stack1, 4);
     int_stack_divide(&stack1);
     int_stack_top(&stack1,&top_value);
     ASSERT_EQ(top_value,3);
     int_stack_pop(&stack1,&top_value);
-
+    //mod remainder only
     int_stack_push(&stack1, 4);
     int_stack_push(&stack1, 3);
     int_stack_mod_r(&stack1);
     int_stack_top(&stack1,&top_value);
     ASSERT_EQ(top_value,1);
     int_stack_pop(&stack1,&top_value);
-
+    //mod remainder quotient 
     int_stack_push(&stack1, 4);
     int_stack_push(&stack1, 3);
     int_stack_mod_r(&stack1);
@@ -107,7 +107,7 @@ TEST(IntStackTests, arithmeticOperations){
     ASSERT_EQ(top_value,1);//quotient 1
 }
 
-TEST(IntStackTests, functions){
+TEST(IntStackTests, singleFunctions){
     int_stack_t stack1; 
     int top_value, next_to_top_value;
     int_stack_init(&stack1, 10);
@@ -134,7 +134,70 @@ TEST(IntStackTests, functions){
     ASSERT_EQ(top_value, 2);
     int_stack_pop(&stack1, &next_to_top_value);
     ASSERT_EQ(next_to_top_value, 1);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(int_stack_size(&stack1), 0);
     //rot 
+    int third_val; 
+    int_stack_push(&stack1, 1);
+    int_stack_push(&stack1, 2);
+    int_stack_push(&stack1, 3);
+    int_stack_rot(&stack1);
+    int_stack_pop(&stack1, &top_value);
+    ASSERT_EQ(top_value, 1);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(next_to_top_value, 3);
+    int_stack_pop(&stack1, &third_val);
+    ASSERT_EQ(third_val, 2);
+    //drop
+    int_stack_push(&stack1, 1);
+    int_stack_drop(&stack1);
+    ASSERT_EQ(int_stack_size(&stack1), 0);
+}
+
+TEST(IntStackTests, doubleFunctions){
+    int_stack_t stack1; 
+    int top_value, next_to_top_value;
+    int_stack_init(&stack1, 10);
+    int_stack_push(&stack1, 3);
+    int_stack_push(&stack1, 4);
+    //2dup
+    int_stack_2dup(&stack1);
+    ASSERT_EQ(int_stack_size(&stack1), 4);
+    int_stack_pop(&stack1, &top_value);
+    ASSERT_EQ(top_value, 4);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(next_to_top_value, 3);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(next_to_top_value, 4);
+    int_stack_pop(&stack1, &next_to_top_value); 
+    ASSERT_EQ(next_to_top_value, 3);
+    //2swap
+    int_stack_push(&stack1, 1);
+    int_stack_push(&stack1, 2);
+    int_stack_push(&stack1, 3);
+    int_stack_push(&stack1, 4);
+    int_stack_2swap(&stack1);
+    int_stack_pop(&stack1, &top_value);
+    ASSERT_EQ(top_value, 2);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(next_to_top_value, 1);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(next_to_top_value, 4);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(next_to_top_value, 3);
+    //2over
+    int_stack_push(&stack1, 1);
+    int_stack_push(&stack1, 2);
+    int_stack_push(&stack1, 3);
+    int_stack_push(&stack1, 4);
+    int_stack_2over(&stack1);
+    int_stack_pop(&stack1, &top_value);
+    ASSERT_EQ(top_value, 2);
+    int_stack_pop(&stack1, &next_to_top_value);
+    ASSERT_EQ(next_to_top_value, 1);
+    //2drop
+    int_stack_2drop(&stack1);
+    ASSERT_EQ(int_stack_size(&stack1), 2);
 }
 
 int main(int argc, char **argv)

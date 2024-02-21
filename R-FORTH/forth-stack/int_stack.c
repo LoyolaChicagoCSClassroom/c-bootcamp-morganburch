@@ -166,7 +166,7 @@ int int_stack_over(int_stack_t *stk) { //copy second to top item on the stack
     int_stack_push(stk, next_to_top_value);
 }
 
-int int_stack_2over(int_stack_t *stk) { //copy second to top item on the stack
+int int_stack_2over(int_stack_t *stk) { //copy second pair to top
     if (stk->size < 4)
         return 0;
     int top_value, next_to_top_value, third_value, fourth_value;
