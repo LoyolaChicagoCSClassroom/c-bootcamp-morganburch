@@ -27,7 +27,7 @@ add_subdirectory(lwlog-demo)
 add_subdirectory(gtest-demo)
 add_subdirectory(HWpractice)
 add_subdirectory(token)
-add_subdirectory(forth-stack)
+add_subdirectory(forth_stack)
 
 
 

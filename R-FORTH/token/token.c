@@ -59,9 +59,8 @@ token_type_t classify_token(char *text){
                 }else if (type == 2){ typeName = "Symbol";  
                 }else if (type == 3){ typeName = "String"; 
                 }else{ typeName = "Unknown";} 
-
-                currToken[strcspn(currToken, "\n")] = 0; //replace newline character
-                printf("{Token: %s\tType: %s}\n\n", currToken, typeName); //weird format on last currToken
+                
+                printf("{Token: %s, Type: %s}\n\n", currToken, typeName); //weird format on last currToken
                 token_count++; 
                 currToken = strtok(NULL, " ");//get next currToken
             }

@@ -2,7 +2,8 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executable(int_stack_demo
+add_executable(
+        int_stack_demo
         int_stack_demo.c
         int_stack.c)
 
