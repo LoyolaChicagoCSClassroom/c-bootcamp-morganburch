@@ -303,6 +303,9 @@ GTEST_HAS_ABSL:BOOL=OFF
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
 
+//No help, variable specified on the command line.
+MAKE_BUILD_TYPE:UNINITIALIZED=Debug
+
 //Value Computed by CMake
 OperatingSystemsStarter_BINARY_DIR:STATIC=/workspaces/c-bootcamp-morganburch/build/R-FORTH
 
