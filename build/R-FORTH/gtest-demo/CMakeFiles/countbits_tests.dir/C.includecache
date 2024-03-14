@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/countbits.c
+stdio.h
+-
+stdlib.h
+-
+countbits.h
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/countbits.h
+
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/countbits.h
+

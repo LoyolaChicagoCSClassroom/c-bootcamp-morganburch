@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblwlog-lib.a  CMakeFiles/lwlog-lib.dir/lwlog-lib.c.o
+/usr/bin/ranlib liblwlog-lib.a

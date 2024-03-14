@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/countbits_app.dir/countbits_app.c.o CMakeFiles/countbits_app.dir/countbits.c.o  -o ../../bin/countbits_app 

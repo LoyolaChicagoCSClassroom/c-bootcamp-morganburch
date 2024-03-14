@@ -1,0 +1,5 @@
+if(EXISTS "/workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/int_stack_tests[1]_tests.cmake")
+  include("/workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/int_stack_tests[1]_tests.cmake")
+else()
+  add_test(int_stack_tests_NOT_BUILT int_stack_tests_NOT_BUILT)
+endif()

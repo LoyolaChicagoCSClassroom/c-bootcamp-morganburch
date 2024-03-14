@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhello-lib.a  CMakeFiles/hello-lib.dir/hello.c.o
+/usr/bin/ranlib libhello-lib.a

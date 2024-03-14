@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root.c
+math.h
+-
+square_root.h
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root.h
+
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root.h
+math.h
+-
+
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root_app.c
+stdio.h
+-
+square_root.h
+/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root.h
+

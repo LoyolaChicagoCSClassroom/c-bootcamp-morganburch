@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/token_main.dir/token_main.c.o  -o ../../bin/token_main 

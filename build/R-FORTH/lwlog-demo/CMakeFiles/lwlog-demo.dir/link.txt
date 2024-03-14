@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/lwlog-demo.dir/lwlog-demo.c.o  -o ../../bin/lwlog-demo  ../lwlog-lib/liblwlog-lib.a 

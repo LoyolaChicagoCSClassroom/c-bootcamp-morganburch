@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/square_root_app.dir/square_root_app.c.o CMakeFiles/square_root_app.dir/square_root.c.o  -o ../../bin/square_root_app  -lpthread -lm 
