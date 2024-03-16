@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.5)
 
 project(OperatingSystemsStarter)
@@ -30,10 +31,6 @@ add_subdirectory(token)
 add_subdirectory(forth_stack)
 
 
-
-
 # You can use add_subdirectory() to add your own work. 
 # Please don't remove the existing subdirectories.
-
-
 
