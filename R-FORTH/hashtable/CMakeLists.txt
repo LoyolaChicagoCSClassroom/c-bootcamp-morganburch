@@ -19,7 +19,7 @@ add_executable(
 )
 
 target_link_libraries(
-        int_stack_tests
+        forth_hashtable_tests
         gtest_main
         -lpthread
 )
