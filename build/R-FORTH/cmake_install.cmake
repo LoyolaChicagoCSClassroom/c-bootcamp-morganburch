@@ -47,6 +47,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/workspaces/c-bootcamp-morganburch/build/R-FORTH/HWpractice/cmake_install.cmake")
   include("/workspaces/c-bootcamp-morganburch/build/R-FORTH/token/cmake_install.cmake")
   include("/workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/cmake_install.cmake")
+  include("/workspaces/c-bootcamp-morganburch/build/R-FORTH/hashtable/cmake_install.cmake")
 
 endif()
 

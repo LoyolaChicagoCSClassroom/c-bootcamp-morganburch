@@ -364,6 +364,32 @@ int_stack_demo/fast:
 	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build
 .PHONY : int_stack_demo/fast
 
+#=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f R-FORTH/hashtable/CMakeFiles/main.dir/build.make R-FORTH/hashtable/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named forth_hashtable
+
+# Build rule for target.
+forth_hashtable: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 forth_hashtable
+.PHONY : forth_hashtable
+
+# fast build rule for target.
+forth_hashtable/fast:
+	$(MAKE) -f R-FORTH/hashtable/CMakeFiles/forth_hashtable.dir/build.make R-FORTH/hashtable/CMakeFiles/forth_hashtable.dir/build
+.PHONY : forth_hashtable/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -392,6 +418,8 @@ help:
 	@echo "... token_main"
 	@echo "... int_stack_tests"
 	@echo "... int_stack_demo"
+	@echo "... main"
+	@echo "... forth_hashtable"
 .PHONY : help
 
 

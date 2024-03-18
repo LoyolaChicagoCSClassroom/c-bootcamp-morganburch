@@ -1,6 +1,16 @@
 FetchContent_MakeAvailable(googletest)
 
+find_package(PkgConfig REQUIRED)
+
+pkg_check_modules(GLIB_PKG glib-2.0)
+if (GLIB_PKG_FOUND)
+    message("Found glib-2.0")
+    include_directories(${GLIB_PKG_INCLUDE_DIRS})
+endif()
+
 enable_testing()
+
+include_directories(/workspaces/c-bootcamp-morganburch/R-FORTH/forth_stack)
 
 add_executable(
         forth_hashtable
@@ -10,19 +20,7 @@ add_executable(
 add_executable(
         main
         main.c
-        int_stack.c)
-
-add_executable(
-        forth_hashtable_tests
-        forth_hashtable_tests.cc
         forth_hashtable.c
-)
+        )
 
-target_link_libraries(
-        forth_hashtable_tests
-        gtest_main
-        -lpthread
-)
 
-include(GoogleTest)
-gtest_discover_tests(int_stack_tests)
