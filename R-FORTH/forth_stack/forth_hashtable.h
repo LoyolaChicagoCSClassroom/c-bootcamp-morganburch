@@ -1,5 +1,6 @@
 #include <glib.h> //lib for hash functions
 #include <stdio.h>
+#include "int_stack.h"
 
 
 //create type for forth words 

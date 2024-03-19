@@ -318,6 +318,9 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //Path to a program.
 _Python3_EXECUTABLE:FILEPATH=/usr/bin/python3.8
 
+//Dependencies for the target
+forth_hashtable_lib_LIB_DEPENDS:STATIC=general;glib-2.0;
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/workspaces/c-bootcamp-morganburch/build/_deps/googletest-build/googlemock
 
@@ -355,6 +358,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 
 //Path to a library.
 pkgcfg_lib_GLIB_PKG_glib-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libglib-2.0.so
+
+//Path to a library.
+pkgcfg_lib_GLIB_glib-2.0:FILEPATH=/usr/lib/x86_64-linux-gnu/libglib-2.0.so
 
 
 ########################
@@ -501,7 +507,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -550,6 +556,22 @@ FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/usr/bin/python3.8][cfound components: Interpreter ][v3.8.10()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+GLIB_CFLAGS:INTERNAL=-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GLIB_CFLAGS_I:INTERNAL=
+GLIB_CFLAGS_OTHER:INTERNAL=
+GLIB_FOUND:INTERNAL=1
+GLIB_INCLUDEDIR:INTERNAL=/usr/include
+GLIB_INCLUDE_DIRS:INTERNAL=/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GLIB_LDFLAGS:INTERNAL=-lglib-2.0
+GLIB_LDFLAGS_OTHER:INTERNAL=
+GLIB_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+GLIB_LIBRARIES:INTERNAL=glib-2.0
+GLIB_LIBRARY_DIRS:INTERNAL=
+GLIB_LIBS:INTERNAL=
+GLIB_LIBS_L:INTERNAL=
+GLIB_LIBS_OTHER:INTERNAL=
+GLIB_LIBS_PATHS:INTERNAL=
+GLIB_MODULE_NAME:INTERNAL=glib-2.0
 GLIB_PKG_CFLAGS:INTERNAL=-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
 GLIB_PKG_CFLAGS_I:INTERNAL=
 GLIB_PKG_CFLAGS_OTHER:INTERNAL=
@@ -585,6 +607,25 @@ GLIB_PKG_glib-2.0_INCLUDEDIR:INTERNAL=
 GLIB_PKG_glib-2.0_LIBDIR:INTERNAL=
 GLIB_PKG_glib-2.0_PREFIX:INTERNAL=
 GLIB_PKG_glib-2.0_VERSION:INTERNAL=
+GLIB_PREFIX:INTERNAL=/usr
+GLIB_STATIC_CFLAGS:INTERNAL=-I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GLIB_STATIC_CFLAGS_I:INTERNAL=
+GLIB_STATIC_CFLAGS_OTHER:INTERNAL=
+GLIB_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include
+GLIB_STATIC_LDFLAGS:INTERNAL=-lglib-2.0;-pthread;-lpcre;-pthread
+GLIB_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+GLIB_STATIC_LIBDIR:INTERNAL=
+GLIB_STATIC_LIBRARIES:INTERNAL=glib-2.0;pcre
+GLIB_STATIC_LIBRARY_DIRS:INTERNAL=
+GLIB_STATIC_LIBS:INTERNAL=
+GLIB_STATIC_LIBS_L:INTERNAL=
+GLIB_STATIC_LIBS_OTHER:INTERNAL=
+GLIB_STATIC_LIBS_PATHS:INTERNAL=
+GLIB_VERSION:INTERNAL=2.64.6
+GLIB_glib-2.0_INCLUDEDIR:INTERNAL=
+GLIB_glib-2.0_LIBDIR:INTERNAL=
+GLIB_glib-2.0_PREFIX:INTERNAL=
+GLIB_glib-2.0_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
@@ -594,7 +635,9 @@ _Python3_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: _Python3_INTERPRETER_SIGNATURE
 _Python3_INTERPRETER_SIGNATURE-ADVANCED:INTERNAL=1
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=60fbcba4d3ec42cb22d9b25de2c7c03a
+__pkg_config_arguments_GLIB:INTERNAL=REQUIRED;glib-2.0
 __pkg_config_arguments_GLIB_PKG:INTERNAL=glib-2.0
+__pkg_config_checked_GLIB:INTERNAL=1
 __pkg_config_checked_GLIB_PKG:INTERNAL=1
 cmake_package_name:INTERNAL=GTest
 generated_dir:INTERNAL=/workspaces/c-bootcamp-morganburch/build/_deps/googletest-build/googletest/generated
@@ -612,6 +655,8 @@ gtest_force_shared_crt-ADVANCED:INTERNAL=1
 gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_GLIB_PKG_glib-2.0
 pkgcfg_lib_GLIB_PKG_glib-2.0-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_GLIB_glib-2.0
+pkgcfg_lib_GLIB_glib-2.0-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 targets_export_name:INTERNAL=GTestTargets
 

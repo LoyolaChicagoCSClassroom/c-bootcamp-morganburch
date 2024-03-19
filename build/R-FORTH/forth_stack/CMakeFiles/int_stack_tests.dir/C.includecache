@@ -6,17 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/c-bootcamp-morganburch/R-FORTH/forth_stack/int_stack.c
-int_stack.h
-/workspaces/c-bootcamp-morganburch/R-FORTH/forth_stack/int_stack.h
-stdlib.h
--
-stdio.h
--
-
-/workspaces/c-bootcamp-morganburch/R-FORTH/forth_stack/int_stack.h
-stdio.h
--
-sys/queue.h
--
-

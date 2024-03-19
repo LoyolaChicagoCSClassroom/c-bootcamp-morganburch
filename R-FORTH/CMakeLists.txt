@@ -29,7 +29,6 @@ add_subdirectory(gtest-demo)
 add_subdirectory(HWpractice)
 add_subdirectory(token)
 add_subdirectory(forth_stack)
-add_subdirectory(hashtable)
 
 
 # You can use add_subdirectory() to add your own work. 

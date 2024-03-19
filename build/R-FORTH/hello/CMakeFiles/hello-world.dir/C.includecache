@@ -6,9 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../R-FORTH/hello-lib/hello.h
-
-/workspaces/c-bootcamp-morganburch/R-FORTH/hello/hello.c
-hello.h
-/workspaces/c-bootcamp-morganburch/R-FORTH/hello/hello.h
-

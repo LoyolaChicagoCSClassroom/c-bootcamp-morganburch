@@ -6,11 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/c-bootcamp-morganburch/R-FORTH/hello-lib/hello.c
-stdio.h
--
-hello.h
-/workspaces/c-bootcamp-morganburch/R-FORTH/hello-lib/hello.h
-
-/workspaces/c-bootcamp-morganburch/R-FORTH/hello-lib/hello.h
-

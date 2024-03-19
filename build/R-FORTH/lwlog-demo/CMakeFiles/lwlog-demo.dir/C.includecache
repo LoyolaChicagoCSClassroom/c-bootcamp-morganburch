@@ -6,15 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../R-FORTH/lwlog-lib/lwlog.h
-stdio.h
--
-errno.h
--
-string.h
--
-
-/workspaces/c-bootcamp-morganburch/R-FORTH/lwlog-demo/lwlog-demo.c
-lwlog.h
-/workspaces/c-bootcamp-morganburch/R-FORTH/lwlog-demo/lwlog.h
-

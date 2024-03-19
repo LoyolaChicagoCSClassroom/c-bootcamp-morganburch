@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTH
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest 
+CXX_INCLUDES = -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest 
 

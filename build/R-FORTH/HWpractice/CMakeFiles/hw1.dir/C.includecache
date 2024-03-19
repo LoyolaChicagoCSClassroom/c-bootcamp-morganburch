@@ -6,9 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/c-bootcamp-morganburch/R-FORTH/HWpractice/hw1.c
-stdio.h
--
-stdlib.h
--
-

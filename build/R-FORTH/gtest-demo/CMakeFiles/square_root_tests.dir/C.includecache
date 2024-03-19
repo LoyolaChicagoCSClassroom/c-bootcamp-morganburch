@@ -6,13 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root.c
-math.h
--
-square_root.h
-/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root.h
-
-/workspaces/c-bootcamp-morganburch/R-FORTH/gtest-demo/square_root.h
-math.h
--
-

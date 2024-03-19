@@ -1,7 +1,7 @@
 #include "forth_hashtable.h"
 #include <glib.h>
 #include <stdio.h>
-#include <int_stack.h>
+#include "int_stack.h"
 
 
 GHashTable* create(GHashFunc hash_func, GEqualFunc key_equal_func) {
@@ -35,3 +35,4 @@ void add_all_functions(GHashTable* hashtable){
     insert(hashtable, "over", (ForthFunction) int_stack_over);
     insert(hashtable, "2over", (ForthFunction) int_stack_2over);
 }
+

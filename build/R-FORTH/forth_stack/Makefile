@@ -157,6 +157,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/rule:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f CMakeFiles/Makefile2 R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/rule
+.PHONY : R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/rule
+
+# Convenience name for target.
+forth_hashtable_lib: R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/rule
+
+.PHONY : forth_hashtable_lib
+
+# fast build rule for target.
+forth_hashtable_lib/fast:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build
+.PHONY : forth_hashtable_lib/fast
+
+# Convenience name for target.
 R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/rule:
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f CMakeFiles/Makefile2 R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/rule
 .PHONY : R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/rule
@@ -186,12 +201,40 @@ int_stack_demo/fast:
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build
 .PHONY : int_stack_demo/fast
 
+forth_hashtable.o: forth_hashtable.c.o
+
+.PHONY : forth_hashtable.o
+
+# target to build an object file
+forth_hashtable.c.o:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/forth_hashtable.c.o
+.PHONY : forth_hashtable.c.o
+
+forth_hashtable.i: forth_hashtable.c.i
+
+.PHONY : forth_hashtable.i
+
+# target to preprocess a source file
+forth_hashtable.c.i:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/forth_hashtable.c.i
+.PHONY : forth_hashtable.c.i
+
+forth_hashtable.s: forth_hashtable.c.s
+
+.PHONY : forth_hashtable.s
+
+# target to generate assembly for a file
+forth_hashtable.c.s:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/forth_hashtable.c.s
+.PHONY : forth_hashtable.c.s
+
 int_stack.o: int_stack.c.o
 
 .PHONY : int_stack.o
 
 # target to build an object file
 int_stack.c.o:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/int_stack.c.o
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/int_stack.c.o
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/int_stack.c.o
 .PHONY : int_stack.c.o
@@ -202,6 +245,7 @@ int_stack.i: int_stack.c.i
 
 # target to preprocess a source file
 int_stack.c.i:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/int_stack.c.i
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/int_stack.c.i
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/int_stack.c.i
 .PHONY : int_stack.c.i
@@ -212,6 +256,7 @@ int_stack.s: int_stack.c.s
 
 # target to generate assembly for a file
 int_stack.c.s:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/int_stack.c.s
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/int_stack.c.s
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/int_stack.c.s
 .PHONY : int_stack.c.s
@@ -279,11 +324,15 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
+	@echo "... forth_hashtable_lib"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... int_stack_tests"
 	@echo "... int_stack_demo"
+	@echo "... forth_hashtable.o"
+	@echo "... forth_hashtable.i"
+	@echo "... forth_hashtable.s"
 	@echo "... int_stack.o"
 	@echo "... int_stack.i"
 	@echo "... int_stack.s"
