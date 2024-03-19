@@ -157,6 +157,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+R-FORTH/forth_stack/CMakeFiles/forth_main.dir/rule:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f CMakeFiles/Makefile2 R-FORTH/forth_stack/CMakeFiles/forth_main.dir/rule
+.PHONY : R-FORTH/forth_stack/CMakeFiles/forth_main.dir/rule
+
+# Convenience name for target.
+forth_main: R-FORTH/forth_stack/CMakeFiles/forth_main.dir/rule
+
+.PHONY : forth_main
+
+# fast build rule for target.
+forth_main/fast:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build
+.PHONY : forth_main/fast
+
+# Convenience name for target.
 R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/rule:
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f CMakeFiles/Makefile2 R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/rule
 .PHONY : R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/rule
@@ -201,12 +216,40 @@ int_stack_demo/fast:
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build
 .PHONY : int_stack_demo/fast
 
+__/token/token.o: __/token/token.c.o
+
+.PHONY : __/token/token.o
+
+# target to build an object file
+__/token/token.c.o:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/__/token/token.c.o
+.PHONY : __/token/token.c.o
+
+__/token/token.i: __/token/token.c.i
+
+.PHONY : __/token/token.i
+
+# target to preprocess a source file
+__/token/token.c.i:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/__/token/token.c.i
+.PHONY : __/token/token.c.i
+
+__/token/token.s: __/token/token.c.s
+
+.PHONY : __/token/token.s
+
+# target to generate assembly for a file
+__/token/token.c.s:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/__/token/token.c.s
+.PHONY : __/token/token.c.s
+
 forth_hashtable.o: forth_hashtable.c.o
 
 .PHONY : forth_hashtable.o
 
 # target to build an object file
 forth_hashtable.c.o:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/forth_hashtable.c.o
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/forth_hashtable.c.o
 .PHONY : forth_hashtable.c.o
 
@@ -216,6 +259,7 @@ forth_hashtable.i: forth_hashtable.c.i
 
 # target to preprocess a source file
 forth_hashtable.c.i:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/forth_hashtable.c.i
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/forth_hashtable.c.i
 .PHONY : forth_hashtable.c.i
 
@@ -225,8 +269,36 @@ forth_hashtable.s: forth_hashtable.c.s
 
 # target to generate assembly for a file
 forth_hashtable.c.s:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/forth_hashtable.c.s
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/forth_hashtable.c.s
 .PHONY : forth_hashtable.c.s
+
+forth_main.o: forth_main.c.o
+
+.PHONY : forth_main.o
+
+# target to build an object file
+forth_main.c.o:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/forth_main.c.o
+.PHONY : forth_main.c.o
+
+forth_main.i: forth_main.c.i
+
+.PHONY : forth_main.i
+
+# target to preprocess a source file
+forth_main.c.i:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/forth_main.c.i
+.PHONY : forth_main.c.i
+
+forth_main.s: forth_main.c.s
+
+.PHONY : forth_main.s
+
+# target to generate assembly for a file
+forth_main.c.s:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/forth_main.c.s
+.PHONY : forth_main.c.s
 
 int_stack.o: int_stack.c.o
 
@@ -234,6 +306,7 @@ int_stack.o: int_stack.c.o
 
 # target to build an object file
 int_stack.c.o:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/int_stack.c.o
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/int_stack.c.o
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/int_stack.c.o
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/int_stack.c.o
@@ -245,6 +318,7 @@ int_stack.i: int_stack.c.i
 
 # target to preprocess a source file
 int_stack.c.i:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/int_stack.c.i
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/int_stack.c.i
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/int_stack.c.i
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/int_stack.c.i
@@ -256,6 +330,7 @@ int_stack.s: int_stack.c.s
 
 # target to generate assembly for a file
 int_stack.c.s:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/int_stack.c.s
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/int_stack.c.s
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/int_stack.c.s
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/int_stack.c.s
@@ -324,15 +399,22 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
+	@echo "... forth_main"
 	@echo "... forth_hashtable_lib"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... int_stack_tests"
 	@echo "... int_stack_demo"
+	@echo "... __/token/token.o"
+	@echo "... __/token/token.i"
+	@echo "... __/token/token.s"
 	@echo "... forth_hashtable.o"
 	@echo "... forth_hashtable.i"
 	@echo "... forth_hashtable.s"
+	@echo "... forth_main.o"
+	@echo "... forth_main.i"
+	@echo "... forth_main.s"
 	@echo "... int_stack.o"
 	@echo "... int_stack.i"
 	@echo "... int_stack.s"

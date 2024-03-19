@@ -339,6 +339,19 @@ token_main/fast:
 .PHONY : token_main/fast
 
 #=============================================================================
+# Target rules for targets named forth_main
+
+# Build rule for target.
+forth_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 forth_main
+.PHONY : forth_main
+
+# fast build rule for target.
+forth_main/fast:
+	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build
+.PHONY : forth_main/fast
+
+#=============================================================================
 # Target rules for targets named forth_hashtable_lib
 
 # Build rule for target.
@@ -403,6 +416,7 @@ help:
 	@echo "... square_root_app"
 	@echo "... hw1"
 	@echo "... token_main"
+	@echo "... forth_main"
 	@echo "... forth_hashtable_lib"
 	@echo "... int_stack_tests"
 	@echo "... int_stack_demo"

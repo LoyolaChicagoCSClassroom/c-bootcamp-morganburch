@@ -131,6 +131,7 @@ R-FORTH/HWpractice/clean: R-FORTH/HWpractice/CMakeFiles/hw1.dir/clean
 # Directory level rules for directory R-FORTH/forth_stack
 
 # Recursive "all" directory target.
+R-FORTH/forth_stack/all: R-FORTH/forth_stack/CMakeFiles/forth_main.dir/all
 R-FORTH/forth_stack/all: R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/all
 R-FORTH/forth_stack/all: R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/all
 R-FORTH/forth_stack/all: R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/all
@@ -143,6 +144,7 @@ R-FORTH/forth_stack/preinstall:
 .PHONY : R-FORTH/forth_stack/preinstall
 
 # Recursive "clean" directory target.
+R-FORTH/forth_stack/clean: R-FORTH/forth_stack/CMakeFiles/forth_main.dir/clean
 R-FORTH/forth_stack/clean: R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/clean
 R-FORTH/forth_stack/clean: R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/clean
 R-FORTH/forth_stack/clean: R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/clean
@@ -331,7 +333,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=12,13 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=17,18 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -358,7 +360,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=10,11 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=15,16 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -385,7 +387,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=16,17 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=21,22 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -412,7 +414,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=14,15 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=19,20 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -439,7 +441,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 R-FORTH/hello/CMakeFiles/hello-world.dir/all: R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/all
 	$(MAKE) -f R-FORTH/hello/CMakeFiles/hello-world.dir/build.make R-FORTH/hello/CMakeFiles/hello-world.dir/depend
 	$(MAKE) -f R-FORTH/hello/CMakeFiles/hello-world.dir/build.make R-FORTH/hello/CMakeFiles/hello-world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=20,21 "Built target hello-world"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=25,26 "Built target hello-world"
 .PHONY : R-FORTH/hello/CMakeFiles/hello-world.dir/all
 
 # Build rule for subdir invocation for target.
@@ -466,7 +468,7 @@ R-FORTH/hello/CMakeFiles/hello-world.dir/clean:
 R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/all:
 	$(MAKE) -f R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/build.make R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/depend
 	$(MAKE) -f R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/build.make R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=18,19 "Built target hello-lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=23,24 "Built target hello-lib"
 .PHONY : R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -493,7 +495,7 @@ R-FORTH/hello-lib/CMakeFiles/hello-lib.dir/clean:
 R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/all:
 	$(MAKE) -f R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/build.make R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/depend
 	$(MAKE) -f R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/build.make R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=32,33 "Built target lwlog-lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=37,38 "Built target lwlog-lib"
 .PHONY : R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -520,7 +522,7 @@ R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/clean:
 R-FORTH/lwlog-demo/CMakeFiles/lwlog-demo.dir/all: R-FORTH/lwlog-lib/CMakeFiles/lwlog-lib.dir/all
 	$(MAKE) -f R-FORTH/lwlog-demo/CMakeFiles/lwlog-demo.dir/build.make R-FORTH/lwlog-demo/CMakeFiles/lwlog-demo.dir/depend
 	$(MAKE) -f R-FORTH/lwlog-demo/CMakeFiles/lwlog-demo.dir/build.make R-FORTH/lwlog-demo/CMakeFiles/lwlog-demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=30,31 "Built target lwlog-demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=35,36 "Built target lwlog-demo"
 .PHONY : R-FORTH/lwlog-demo/CMakeFiles/lwlog-demo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -548,7 +550,7 @@ R-FORTH/gtest-demo/CMakeFiles/square_root_tests.dir/all: _deps/googletest-build/
 R-FORTH/gtest-demo/CMakeFiles/square_root_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f R-FORTH/gtest-demo/CMakeFiles/square_root_tests.dir/build.make R-FORTH/gtest-demo/CMakeFiles/square_root_tests.dir/depend
 	$(MAKE) -f R-FORTH/gtest-demo/CMakeFiles/square_root_tests.dir/build.make R-FORTH/gtest-demo/CMakeFiles/square_root_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=37,38,39 "Built target square_root_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=42,43,44 "Built target square_root_tests"
 .PHONY : R-FORTH/gtest-demo/CMakeFiles/square_root_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -630,7 +632,7 @@ R-FORTH/gtest-demo/CMakeFiles/countbits_tests.dir/clean:
 R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/all:
 	$(MAKE) -f R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/build.make R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/depend
 	$(MAKE) -f R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/build.make R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=34,35,36 "Built target square_root_app"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=39,40,41 "Built target square_root_app"
 .PHONY : R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/all
 
 # Build rule for subdir invocation for target.
@@ -657,7 +659,7 @@ R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/clean:
 R-FORTH/HWpractice/CMakeFiles/hw1.dir/all:
 	$(MAKE) -f R-FORTH/HWpractice/CMakeFiles/hw1.dir/build.make R-FORTH/HWpractice/CMakeFiles/hw1.dir/depend
 	$(MAKE) -f R-FORTH/HWpractice/CMakeFiles/hw1.dir/build.make R-FORTH/HWpractice/CMakeFiles/hw1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=22,23 "Built target hw1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=27,28 "Built target hw1"
 .PHONY : R-FORTH/HWpractice/CMakeFiles/hw1.dir/all
 
 # Build rule for subdir invocation for target.
@@ -684,7 +686,7 @@ R-FORTH/HWpractice/CMakeFiles/hw1.dir/clean:
 R-FORTH/token/CMakeFiles/token_main.dir/all:
 	$(MAKE) -f R-FORTH/token/CMakeFiles/token_main.dir/build.make R-FORTH/token/CMakeFiles/token_main.dir/depend
 	$(MAKE) -f R-FORTH/token/CMakeFiles/token_main.dir/build.make R-FORTH/token/CMakeFiles/token_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=40,41 "Built target token_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=45,46 "Built target token_main"
 .PHONY : R-FORTH/token/CMakeFiles/token_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -703,6 +705,33 @@ token_main: R-FORTH/token/CMakeFiles/token_main.dir/rule
 R-FORTH/token/CMakeFiles/token_main.dir/clean:
 	$(MAKE) -f R-FORTH/token/CMakeFiles/token_main.dir/build.make R-FORTH/token/CMakeFiles/token_main.dir/clean
 .PHONY : R-FORTH/token/CMakeFiles/token_main.dir/clean
+
+#=============================================================================
+# Target rules for target R-FORTH/forth_stack/CMakeFiles/forth_main.dir
+
+# All Build rule for target.
+R-FORTH/forth_stack/CMakeFiles/forth_main.dir/all:
+	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/depend
+	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=10,11,12,13,14 "Built target forth_main"
+.PHONY : R-FORTH/forth_stack/CMakeFiles/forth_main.dir/all
+
+# Build rule for subdir invocation for target.
+R-FORTH/forth_stack/CMakeFiles/forth_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c-bootcamp-morganburch/build/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 R-FORTH/forth_stack/CMakeFiles/forth_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/c-bootcamp-morganburch/build/CMakeFiles 0
+.PHONY : R-FORTH/forth_stack/CMakeFiles/forth_main.dir/rule
+
+# Convenience name for target.
+forth_main: R-FORTH/forth_stack/CMakeFiles/forth_main.dir/rule
+
+.PHONY : forth_main
+
+# clean rule for target.
+R-FORTH/forth_stack/CMakeFiles/forth_main.dir/clean:
+	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/clean
+.PHONY : R-FORTH/forth_stack/CMakeFiles/forth_main.dir/clean
 
 #=============================================================================
 # Target rules for target R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir
@@ -739,7 +768,7 @@ R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/all: _deps/googletest-build/g
 R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/depend
 	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=27,28,29 "Built target int_stack_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=32,33,34 "Built target int_stack_tests"
 .PHONY : R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/all
 
 # Build rule for subdir invocation for target.
@@ -766,7 +795,7 @@ R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/clean:
 R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/all:
 	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/depend
 	$(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=24,25,26 "Built target int_stack_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/workspaces/c-bootcamp-morganburch/build/CMakeFiles --progress-num=29,30,31 "Built target int_stack_demo"
 .PHONY : R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/all
 
 # Build rule for subdir invocation for target.

@@ -107,6 +107,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "R-FORTH/gtest-demo/CMakeFiles/square_root_app.dir/DependInfo.cmake"
   "R-FORTH/HWpractice/CMakeFiles/hw1.dir/DependInfo.cmake"
   "R-FORTH/token/CMakeFiles/token_main.dir/DependInfo.cmake"
+  "R-FORTH/forth_stack/CMakeFiles/forth_main.dir/DependInfo.cmake"
   "R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir/DependInfo.cmake"
   "R-FORTH/forth_stack/CMakeFiles/int_stack_tests.dir/DependInfo.cmake"
   "R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/DependInfo.cmake"

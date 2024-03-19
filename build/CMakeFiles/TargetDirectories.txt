@@ -87,6 +87,7 @@
 /workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/CMakeFiles/install/strip.dir
 /workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/CMakeFiles/install/local.dir
 /workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/CMakeFiles/edit_cache.dir
+/workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/CMakeFiles/forth_main.dir
 /workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/CMakeFiles/forth_hashtable_lib.dir
 /workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/CMakeFiles/install.dir
 /workspaces/c-bootcamp-morganburch/build/R-FORTH/forth_stack/CMakeFiles/list_install_components.dir

@@ -9,6 +9,9 @@ if (GLIB_PKG_FOUND)
 endif()
 
 enable_testing()
+include_directories(/workspaces/c-bootcamp-morganburch/R-FORTH/token)
+
+set(TOKEN_SOURCE_DIR /workspaces/c-bootcamp-morganburch/R-FORTH/token)
 
 add_executable(
         int_stack_demo
@@ -39,5 +42,18 @@ target_link_libraries(
         ${GLIB_PKG_LIBRARIES}
 )
 
+add_executable(
+        forth_main     
+        forth_main.c 
+        forth_hashtable.c
+        int_stack.c
+        ${TOKEN_SOURCE_DIR}/token.c
+)
+
+target_link_libraries(
+        forth_main
+        ${GLIB_PKG_LIBRARIES}
+)
 include(GoogleTest)
 gtest_discover_tests(int_stack_tests)
+
