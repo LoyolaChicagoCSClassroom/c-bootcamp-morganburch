@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "token.h"
+#include "copy_token.h"
 #include "forth_hashtable.h"
 #include "int_stack.h"
 

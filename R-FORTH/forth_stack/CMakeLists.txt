@@ -9,7 +9,6 @@ if (GLIB_PKG_FOUND)
 endif()
 
 enable_testing()
-include_directories(/workspaces/c-bootcamp-morganburch/R-FORTH/token)
 
 set(TOKEN_SOURCE_DIR /workspaces/c-bootcamp-morganburch/R-FORTH/token)
 
@@ -47,7 +46,7 @@ add_executable(
         forth_main.c 
         forth_hashtable.c
         int_stack.c
-        ${TOKEN_SOURCE_DIR}/token.c
+        copy_token.c
 )
 
 target_link_libraries(

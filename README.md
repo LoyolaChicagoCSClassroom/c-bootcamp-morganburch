@@ -2,6 +2,12 @@
 
 
 Essentially my work log: 
+3/19/24
+--successfully linked glib and int_stack
+--did link token but only works on codespaces, not git workflow? 
+--added test file --will be adding cases shortly 
+
+
 3/18/24
 --tried to successfully link glib library to make hastable work
    (it didnt) 
