@@ -5,9 +5,13 @@
 #include "int_stack.h"
 
 int main() {
+    printf("is this even doing anything \n");
     int i;
     int_stack_t stack; 
+    printf("stack made \n");
     GHashTable* forth_hashtable = create();
+    printf("hash made \n");
+
     if (forth_hashtable == NULL) {
         printf("Error: Could not create hashtable.\n");
         return 1;
@@ -30,7 +34,6 @@ int main() {
     }
     
     destroy(forth_hashtable);
-
     return 0;
 }
 
