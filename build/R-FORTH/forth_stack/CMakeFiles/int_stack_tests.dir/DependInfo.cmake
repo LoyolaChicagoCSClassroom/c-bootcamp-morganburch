@@ -13,7 +13,6 @@ set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/glib-2.0"
   "/usr/lib/x86_64-linux-gnu/glib-2.0/include"
-  "../R-FORTH/token"
   "_deps/googletest-src/googletest/include"
   "_deps/googletest-src/googletest"
   )
@@ -26,7 +25,6 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/glib-2.0"
   "/usr/lib/x86_64-linux-gnu/glib-2.0/include"
-  "../R-FORTH/token"
   "_deps/googletest-src/googletest/include"
   "_deps/googletest-src/googletest"
   )

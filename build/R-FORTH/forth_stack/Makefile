@@ -216,32 +216,32 @@ int_stack_demo/fast:
 	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build.make R-FORTH/forth_stack/CMakeFiles/int_stack_demo.dir/build
 .PHONY : int_stack_demo/fast
 
-__/token/token.o: __/token/token.c.o
+copy_token.o: copy_token.c.o
 
-.PHONY : __/token/token.o
+.PHONY : copy_token.o
 
 # target to build an object file
-__/token/token.c.o:
-	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/__/token/token.c.o
-.PHONY : __/token/token.c.o
+copy_token.c.o:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/copy_token.c.o
+.PHONY : copy_token.c.o
 
-__/token/token.i: __/token/token.c.i
+copy_token.i: copy_token.c.i
 
-.PHONY : __/token/token.i
+.PHONY : copy_token.i
 
 # target to preprocess a source file
-__/token/token.c.i:
-	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/__/token/token.c.i
-.PHONY : __/token/token.c.i
+copy_token.c.i:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/copy_token.c.i
+.PHONY : copy_token.c.i
 
-__/token/token.s: __/token/token.c.s
+copy_token.s: copy_token.c.s
 
-.PHONY : __/token/token.s
+.PHONY : copy_token.s
 
 # target to generate assembly for a file
-__/token/token.c.s:
-	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/__/token/token.c.s
-.PHONY : __/token/token.c.s
+copy_token.c.s:
+	cd /workspaces/c-bootcamp-morganburch/build && $(MAKE) -f R-FORTH/forth_stack/CMakeFiles/forth_main.dir/build.make R-FORTH/forth_stack/CMakeFiles/forth_main.dir/copy_token.c.s
+.PHONY : copy_token.c.s
 
 forth_hashtable.o: forth_hashtable.c.o
 
@@ -406,9 +406,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... int_stack_tests"
 	@echo "... int_stack_demo"
-	@echo "... __/token/token.o"
-	@echo "... __/token/token.i"
-	@echo "... __/token/token.s"
+	@echo "... copy_token.o"
+	@echo "... copy_token.i"
+	@echo "... copy_token.s"
 	@echo "... forth_hashtable.o"
 	@echo "... forth_hashtable.i"
 	@echo "... forth_hashtable.s"

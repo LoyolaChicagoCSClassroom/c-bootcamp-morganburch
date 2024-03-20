@@ -10,11 +10,12 @@ You will create an abstract datatype (struct token_t) that will have a
 #include <stdio.h>
 
 typedef enum{ //new data type
-    TOKEN_NUM,
-    TOKEN_OP, 
-    TOKEN_SYM, 
-    TOKEN_STR,
-    TOKEN_UNKNOWN,
+    TOKEN_NUM, //0
+    TOKEN_OP, //1
+    TOKEN_SYM, //2
+    TOKEN_STR, //3
+    TOKEN_UNKNOWN, //4
+    TOKEN_WORD, 
 } token_type_t; //alias
 
 typedef struct{ 

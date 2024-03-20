@@ -3,8 +3,7 @@
 #include "int_stack.h"
 
 
-//create type for forth words 
-typedef void (*ForthFunction)();
+typedef void (*ForthFunction)(int_stack_t *);
 
 //hashtable function prototypes
 extern GHashTable* create();

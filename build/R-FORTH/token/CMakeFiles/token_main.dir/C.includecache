@@ -6,3 +6,29 @@
 
 #IncludeRegexTransform: 
 
+/workspaces/c-bootcamp-morganburch/R-FORTH/token/token.c
+token.h
+/workspaces/c-bootcamp-morganburch/R-FORTH/token/token.h
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+
+/workspaces/c-bootcamp-morganburch/R-FORTH/token/token.h
+stdio.h
+-
+
+/workspaces/c-bootcamp-morganburch/R-FORTH/token/token_main.c
+stdlib.h
+-
+stdio.h
+-
+token.h
+/workspaces/c-bootcamp-morganburch/R-FORTH/token/token.h
+token.c
+/workspaces/c-bootcamp-morganburch/R-FORTH/token/token.c
+

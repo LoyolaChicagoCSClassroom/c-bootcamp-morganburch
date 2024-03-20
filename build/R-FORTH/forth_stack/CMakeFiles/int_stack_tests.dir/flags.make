@@ -7,11 +7,11 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/workspaces/c-bootcamp-morganburch/R-FORTH/token -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest 
+C_INCLUDES = -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest 
 
 CXX_FLAGS = -g   -std=gnu++17
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/workspaces/c-bootcamp-morganburch/R-FORTH/token -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest 
+CXX_INCLUDES = -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest/include -isystem /workspaces/c-bootcamp-morganburch/build/_deps/googletest-src/googletest 
 
