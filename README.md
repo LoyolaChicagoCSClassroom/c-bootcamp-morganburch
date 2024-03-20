@@ -1,5 +1,14 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=13584757)
 
+# R-Forth (Morgan Burch)
+* Features: 
+   * token - parse input from stdin and return stream of individual tokens (ignore whitespace)
+   * stack - all forth funtions properly manipulate the stack
+   * hashtable - all stack operations in hastable
+* TODO: 
+   * add variables, loops, conditionals
+   * add test cases for hashtable 
+   * interactive forth 
 
 ## Work Log: 
 * 3/19/24
